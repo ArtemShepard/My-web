@@ -1,0 +1,13 @@
+#cube{
+	height: 100px;
+	width: 100px;
+	background-color: red;
+	display: none;
+}
+#circle{
+	height: 100px;
+	width: 100px;
+	background-color: blue;
+	border-radius: 50%;
+	display: none;
+}

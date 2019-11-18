@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link media="screen" rel="stylesheet" type="text/css" href="style/style.css">
+	<title>Document</title>
+</head>
+<body>
+	<input type="" name="" id="input">
+	<button id="button">Go</button>
+	<p id="display">Enter you number</p>
+	<input type="range" name="r0" id="r0" min="0" max="100" value="0">
+	<br>
+	<input type="range" name="r1" id="r1" min="0" max="100" value="0">
+	<br>
+	<input type="range" name="r2" id="r2" min="0" max="100" value="0">
+	<br>
+	<input type="range" name="r3" id="r3" min="0" max="100" value="0">
+	<br>
+	<input type="range" name="r4" id="r4" min="0" max="100" value="0">
+	<br>
+	<input type="range" name="r5" id="r5" min="0" max="100" value="0">
+	<script type="text/javascript">
+		var click = 0;
+		var hitr0 = 1;
+		var hitr1 = 1;
+		var hitr2 = 1;
+		var hitr3 = 1;
+		var hitr4 = 1;
+		var hitr5 = 1;
+		
+		document.getElementById("button").onclick = function(){
+			click++;
+			var random = Math.floor(Math.random()*5.9);
+			if (random == 0) {
+				hitr0++;	
+			}
+			if(random == 1){
+				hitr1++;	
+			}
+			if(random == 2){
+				hitr2++;	
+			}
+			if(random == 3){
+				hitr3++;	
+			}
+			if(random == 4){
+				hitr4++;	
+			}
+			if(random == 5){
+				hitr5++;	
+			}
+			
+			document.getElementById("r0").value = 100/click*hitr0;
+			document.getElementById("r1").value = 100/click*hitr1;
+			document.getElementById("r2").value = 100/click*hitr2;
+			document.getElementById("r3").value = 100/click*hitr3;
+			document.getElementById("r4").value = 100/click*hitr4;
+			document.getElementById("r5").value = 100/click*hitr5;
+			if (random == document.getElementById("input").value) {
+				document.getElementById("display").innerHTML = "You win," + random;
+			}
+			else{
+				document.getElementById("display").innerHTML = "i'm sorry, you dont luck((( " + random;
+			}
+		}
+	</script>
+</body>
+</html>

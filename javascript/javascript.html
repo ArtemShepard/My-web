@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link media="screen" rel="stylesheet" type="text/css" href="style/style.css">
+	<title>Javascript</title>
+</head>
+<body id="GG">
+	<p id="text" style="color: #000000">Hello world!!!</p>
+	<button id="button">Clic Me =P</button>
+	<p id="secondParagaph">JavaScript is...</p>
+	<button id="button2">Dont Clic Me :'(</button><br>
+	<button id="button3">Press F</button>
+	<p id="empty"></p>
+	<br>
+	<div class="circle" id="red"></div>
+	<div class="circle" id="green"></div>
+	<div class="circle" id="blue"></div>
+	<script type="text/javascript">
+		//  я пытался сделать плавное изменение цвета текста
+		/*document.getElementById("button").onclick = function()
+			{
+				var i = 000000;
+				while(i<999999){
+					i++;
+					document.getElementById("text").style.color ="#ff0000";
+				}
+				alert("End!")
+			}*/
+			// Доступ к элементу
+			//document.getElementById("text").innerHTML = "bla-bla-bla";
+			document.getElementById("button").onclick = function()
+			{
+				document.getElementById("text").innerHTML = "Hello Artem!!!";
+			}
+			document.getElementById("button2").onclick = function()
+			{
+				document.getElementById("secondParagaph").innerHTML = "I think "+document.getElementById("secondParagaph").innerHTML+" awesome";
+			}
+			document.getElementById("button3").onclick = function()
+			{
+				document.getElementById("GG").innerHTML = document.getElementById("GG").innerHTML + "I'm cheater";
+			}
+			document.getElementById("red").onclick = function()
+			{
+				document.getElementById("red").style.display ="none";
+			}
+			document.getElementById("green").onclick = function()
+			{
+				document.getElementById("green").style.display ="none";
+			}
+			document.getElementById("blue").onclick = function()
+			{
+				document.getElementById("blue").style.display ="none";
+			}
+	</script>
+
+</body>
+</html>

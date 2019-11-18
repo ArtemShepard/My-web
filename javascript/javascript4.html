@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="body"></p>
+	<input type="" name="" id="number">
+	<button id="play">Play in game</button>
+	<script type="text/javascript">
+		var tweets = ["hi","i love...","lol"];
+		for (var i = 0; i < tweets.length; i++) {
+			document.getElementById("body").innerHTML = document.getElementById("body").innerHTML + tweets[i] + "<br>"
+		}
+		var number;
+		var rand = Math.floor(Math.random()*5.9);
+		document.getElementById("play").onclick = function(){
+			number = document.getElementById("number").value;
+			gotit = false;
+			eterations = 1;
+			while (gotit == false){
+			rand = Math.floor(Math.random()*5.9)
+			if(rand == number){
+				gotit = true;
+				alert("компьютер отгадал число за: " + eterations + " попыток" )
+			}
+			else{
+				eterations++;
+			}
+			if (eterations > 500) {
+				alert("произошла ошибка, разрешено вводить значения от 0 до 5, попробуйте еще раз");
+				break;
+			}
+			}
+			
+		}
+	</script>
+</body>
+</html>

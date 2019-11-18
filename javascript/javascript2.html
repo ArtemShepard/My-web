@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" name="" id="input">
+	<button id="button">Press F</button>
+	<p id="paragraph"></p>
+	<input type="" name="" id="inputword">
+	<button id="keybatton">keybatton</button>
+	<script type="text/javascript">
+		document.getElementById("button").onclick = function(){
+			var x;
+			x = document.getElementById("input").value;
+			document.getElementById("paragraph").innerHTML = x;
+			alert("Updated");
+		}
+			var myArray = new Array();
+			myArray[0] = "pizza";
+			myArray[1] = "choco";
+			console.log(myArray.length);// выводит в консоль сообщение
+
+			var tweets = ["morning everyday","I love coffe"];
+			tweets.push("Back to work");//добавляет  элемент в конец
+			//tweets.splice(1,2);// удаляет элемент массива (элемент,количество удаляемых элементов)
+			tweets.splice(1,0,"Cornflakes");//добавляет элемент  перед указанным
+			console.log(tweets);
+
+			var keyword = "lol";
+			var userword;
+			document.getElementById("keybatton").onclick = function(){
+				userword = document.getElementById("inputword").value;
+				if (keyword == userword) 
+			{
+				alert("it is cool")
+			}
+				else{
+					alert("Baaaad(((((")
+			}
+			}
+	</script>
+</body>
+</html>

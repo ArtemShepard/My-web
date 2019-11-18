@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="" name="" id="number">
+	<button id="play">Play in game</button>
+	<script type="text/javascript">
+		
+		var rand;
+		eterations = 1;
+		guessed = false;
+
+
+		function lol(number){
+			rand = Math.floor(Math.random()*5.9)
+			if(rand == number){
+				return(true);
+			}
+			else{
+				return(false);
+			}
+		}
+		
+		
+		document.getElementById("play").onclick = function(){
+
+			var number = document.getElementById("number").value;
+			
+			
+			while (guessed == false){
+			
+				if (lol(number) == true) {
+					guessed = true;
+					alert("компьютер отгадал число за: " + eterations + " попыток" );
+				}
+				else{
+					eterations++;
+					if (eterations > 500) {
+						alert("произошла ошибка, разрешено вводить значения от 0 до 5, попробуйте еще раз");
+						break;
+					}
+				}
+			}
+			guessed = false;
+			eterations = 1;
+
+		}	
+	</script>
+</body>
+</html>
