@@ -7,11 +7,15 @@ var randomcolor;
 var width;
 var location 
 
-var x = Math.floor(Math.random()*2);
-if(x >1){
+
+
+if(Math.floor(Math.random()*2) == 1){
 	randomfigure = "cube";
 }
 else{
 	randomfigure = "circle";
 }
-document.getElementById(randomfigure).style.display = "none";
+console.log(randomfigure);
+document.getElementById(randomfigure).style.display = "block";
+
+document.getElementById(randomfigure).style.backgroundColor = "#"+Math.floor(Math.random()*999999);
